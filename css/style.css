@@ -1,0 +1,7 @@
+/* === Reseteo Global de Cajas === */
+/* Elimina márgenes por defecto y evita que el padding expanda el tamaño de los elementos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
