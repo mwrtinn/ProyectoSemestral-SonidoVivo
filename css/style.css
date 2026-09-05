@@ -5,3 +5,104 @@
   margin: 0;
   padding: 0;
 }
+
+/* Estilos Generales */
+body {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* Encabezado */
+.encabezado-principal {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  color: #111111;
+}
+
+.encabezado-principal img {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+.titulo-tienda {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.slogan-tienda {
+  color: #555555;
+  font-style: italic;
+}
+
+/* Navegacion */
+.navegacion-principal {
+  background-color: #0a0a0a;
+  padding: 15px 0;
+  border-bottom: 1px solid #333333;
+}
+
+.menu-lista {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.menu-lista a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.menu-lista a:hover {
+  color: #888888;
+}
+
+/* Contenido Principal */
+.contenido-principal {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.seccion-bienvenida,
+.seccion-ventajas {
+  background-color: #242424;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  border-left: 4px solid #ffffff;
+}
+
+.titulo-seccion {
+  color: #ffffff;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #444444;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.lista-ventajas {
+  list-style-position: inside;
+  margin-top: 15px;
+  color: #cccccc;
+}
+
+.lista-ventajas li {
+  margin-bottom: 10px;
+}
+
+/* Pie de pagina */
+.pie-pagina {
+  text-align: center;
+  padding: 20px;
+  background-color: #0a0a0a;
+  color: #777777;
+  font-size: 0.9rem;
+}
