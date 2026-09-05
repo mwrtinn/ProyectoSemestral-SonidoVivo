@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,72 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/funciones.js" defer></script>
 </head>
+
 <body>
-    
+    <!-- Encabezado principal de la tienda -->
+    <header class="encabezado-principal">
+        <img src="img/logo.png" alt="Logotipo oficial de Sonido Vivo">
+        <h1 class="titulo-tienda">Sonido Vivo</h1>
+        <p class="slogan-tienda">Tu tienda especialista en instrumentos y audio de alta fidelidad</p>
+    </header>
+
+    <!-- Menú de navegación principal -->
+    <nav class="navegacion-principal">
+        <ul class="menu-lista">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo de Productos</a></li>
+            <li><a href="pedido.html">Hacer un Pedido</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="contenido-principal">
+
+        <h2 class="titulo-seccion">Catálogo de Productos</h2>
+
+        <!-- Grilla de productos -->
+        <section class="grilla-productos">
+
+            <!-- Producto 1: Yamaha F310 -->
+            <article class="tarjeta-producto">
+                <div class="imagen-producto">
+                    <img src="img/guitarra-Yamaha-F310.webp" alt="Guitarra Acústica Folk Yamaha">
+                </div>
+                <div class="info-producto">
+                    <span class="categoria-etiqueta">Guitarras Acústicas</span>
+                    <h3 class="nombre-producto">Guitarra Acústica Folk</h3>
+                    <p class="marca-modelo">Yamaha - F310</p>
+                    <p class="descripcion-corta">Tapa de abeto, aros y fondo de meranti. Ideal para iniciantes.</p>
+                    <p class="precio-producto">$129.990</p>
+                    <button class="btn-agregar">Agregar al carrito</button>
+                </div>
+            </article>
+
+            <!-- Producto 2: Fender CD-60S -->
+            <article class="tarjeta-producto">
+                <div class="imagen-producto">   
+                    <img src="img/guitarra-Fender-CD-60S.webp" alt="Guitarra Acústica Dreadnought Fender">
+                </div>
+                <div class="info-producto">
+                    <span class="categoria-etiqueta">Guitarras Acústicas</span>
+                    <h3 class="nombre-producto">Guitarra Acústica Dreadnought</h3>
+                    <p class="marca-modelo">Fender - CD-60S</p>
+                    <p class="descripcion-corta">Tapa de abeto macizo, brazo de caoba. Sonido cálido y proyectado.</p>
+                    <p class="precio-producto">$189.990</p>
+                    <button class="btn-agregar">Agregar al carrito</button>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="pie-pagina">
+        <p>&copy; 2026 Sonido Vivo. Todos los derechos reservados.</p>
+        <p>Contacto: soporte@sonidovivo.cl | Teléfono: +56 9 1234 5678</p>
+    </footer>
+
 </body>
+
 </html>
