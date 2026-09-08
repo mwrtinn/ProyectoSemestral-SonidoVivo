@@ -190,3 +190,140 @@ body {
 .btn-agregar:hover {
   background-color: #888888;
 }
+
+/* ===================================================
+   VISTA DE PEDIDO Y CHECKOUT (pedido.html) */
+
+/* Carrito Vacio */
+.seccion-vacia {
+  background-color: #242424;
+  padding: 40px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #333333;
+}
+
+.mensaje-alerta-vacio p {
+  margin-bottom: 15px;
+}
+
+.btn-volver-tienda {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #111111;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.btn-volver-tienda:hover {
+  background-color: #888888;
+}
+
+/* Tabla de Resumen */
+.seccion-resumen-tabla {
+  background-color: #242424;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.subtitulo-checkout {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.tabla-pedidos {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-pedidos th,
+.tabla-pedidos td {
+  padding: 10px;
+  border-bottom: 1px solid #333333;
+  text-align: left;
+}
+
+.tabla-pedidos th {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+.texto-total,
+.valor-total {
+  font-weight: bold;
+  color: #ffffff;
+  padding-top: 15px;
+}
+
+/* Formulario de Pedido */
+.seccion-formulario-checkout {
+  background-color: #242424;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.grupo-formulario {
+  border: 1px solid #333333;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+.grupo-formulario legend {
+  color: #ffffff;
+  padding: 0 5px;
+}
+
+.campo-control {
+  margin-bottom: 15px;
+}
+
+.campo-control label {
+  display: block;
+  margin-bottom: 5px;
+  color: #cccccc;
+}
+
+.campo-control input,
+.campo-control select {
+  width: 100%;
+  padding: 10px;
+  background-color: #1a1a1a;
+  border: 1px solid #444444;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+.mensaje-error {
+  color: #ff5555;
+  font-size: 0.85rem;
+}
+
+/* Mensaje Exito y Boton Confirmar */
+.mensaje-exito {
+  background-color: #1e3a1e;
+  color: #a3e635;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.btn-primario {
+  background-color: #ffffff;
+  color: #111111;
+  border: none;
+  padding: 12px 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-primario:hover {
+  background-color: #888888;
+}

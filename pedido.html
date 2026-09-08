@@ -1,13 +1,146 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonido Vivo - Pedido</title>
+    <title>Sonido Vivo - Carrito y Pedido</title>
+    <!-- Enlaces a archivos externos -->
     <link rel="stylesheet" href="css/style.css">
     <script src="js/funciones.js" defer></script>
 </head>
+
 <body>
-    
+
+    <!-- Encabezado principal de la tienda -->
+    <header class="encabezado-principal">
+        <img src="img/logo.png" alt="Logotipo oficial de Sonido Vivo">
+        <h1 class="titulo-tienda">Sonido Vivo</h1>
+        <p class="slogan-tienda">Tu tienda especialista en instrumentos y audio de alta fidelidad</p>
+    </header>
+
+    <!-- Menú de navegación principal -->
+    <nav class="navegacion-principal">
+        <ul class="menu-lista">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo de Productos</a></li>
+            <li><a href="pedido.html">Hacer un Pedido</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="contenido-principal">
+
+        <h2 class="titulo-seccion">Revisión de Pedido y Checkout</h2>
+
+        <!-- Estado 1: Mensaje de Carrito Vacío (controlado vía JS si no hay datos en localStorage) -->
+        <section id="contenedor-carrito-vacio" class="seccion-vacia" style="display: none;">
+            <div class="mensaje-alerta-vacio">
+                <p>Tu carrito está vacío</p>
+                <p>Aún no has agregado ningún instrumento o equipo a tu compra.</p>
+                <a href="catalogo.html" class="btn-volver-tienda">Volver a la tienda</a>
+            </div>
+        </section>
+
+        <!-- Estado 2: Contenedor principal de compra (se oculta si el carrito está vacío) -->
+        <div id="contenedor-checkout">
+
+            <!-- Resumen de compra: Tabla dinámica leída desde localStorage -->
+            <section class="seccion-resumen-tabla">
+                <h3 class="subtitulo-checkout">Resumen de compra</h3>
+                <div class="tabla-contenedor">
+                    <table class="tabla-pedidos">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Precio Unitario</th>
+                                <th>Cantidad</th>
+                                <th>Subtotal</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <!-- El script funciones.js inserta aquí las filas con innerHTML -->
+                        <tbody id="cuerpo-tabla-carrito"></tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3" class="texto-total">Total a pagar:</td>
+                                <td colspan="2" id="total-final-pago" class="valor-total">$0</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Formulario de envío y método de pago -->
+            <section class="seccion-formulario-checkout">
+                <form id="formulario-pedido" novalidate>
+
+                    <!-- Formulario de envío -->
+                    <fieldset class="grupo-formulario">
+                        <legend>Datos de Envío</legend>
+
+                        <div class="campo-control">
+                            <label for="nombre-envio">Nombre Completo:</label>
+                            <input type="text" id="nombre-envio" name="nombreEnvio" placeholder="Ej: Juan Pérez">
+                            <small class="mensaje-error" id="error-nombre"></small>
+                        </div>
+
+                        <div class="campo-control">
+                            <label for="correo-envio">Correo Electrónico:</label>
+                            <input type="email" id="correo-envio" name="correoEnvio" placeholder="usuario@correo.cl">
+                            <small class="mensaje-error" id="error-correo"></small>
+                        </div>
+
+                        <div class="campo-control">
+                            <label for="telefono-envio">Teléfono:</label>
+                            <input type="tel" id="telefono-envio" name="telefonoEnvio" placeholder="+56 9 1234 5678">
+                            <small class="mensaje-error" id="error-telefono"></small>
+                        </div>
+
+                        <div class="campo-control">
+                            <label for="direccion-despacho">Dirección de Despacho:</label>
+                            <input type="text" id="direccion-despacho" name="direccionDespacho" placeholder="Calle, número, comuna y región">
+                            <small class="mensaje-error" id="error-direccion"></small>
+                        </div>
+                    </fieldset>
+
+                    <!-- Método de pago -->
+                    <fieldset class="grupo-formulario">
+                        <legend>Método de Pago</legend>
+
+                        <div class="campo-control">
+                            <label for="metodo-pago">Selecciona la forma de pago:</label>
+                            <select id="metodo-pago" name="metodoPago">
+                                <option value="">-- Selecciona una opción --</option>
+                                <option value="tarjeta_debito">Tarjeta de Débito (Redcompra / Webpay)</option>
+                                <option value="tarjeta_credito">Tarjeta de Crédito</option>
+                                <option value="transferencia">Transferencia Bancaria Electrónica</option>
+                            </select>
+                            <small class="mensaje-error" id="error-pago"></small>
+                        </div>
+                    </fieldset>
+
+                    <!-- Mensaje dinámico de confirmación exitosa -->
+                    <div id="mensaje-exito" class="mensaje-exito" style="display: none;"></div>
+
+                    <!-- Botón definitivo -->
+                    <div class="acciones-formulario">
+                        <button type="submit" id="btn-confirmar-compra" class="btn-primario">Confirmar Compra</button>
+                    </div>
+
+                </form>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="pie-pagina">
+        <p>&copy; 2026 Sonido Vivo. Todos los derechos reservados.</p>
+        <p>Contacto: soporte@sonidovivo.cl | Teléfono: +56 9 1234 5678</p>
+    </footer>
+
 </body>
+
 </html>
